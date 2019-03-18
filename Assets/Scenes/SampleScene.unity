@@ -431,7 +431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234683451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.21, y: -1.97, z: 0.051982485}
+  m_LocalPosition: {x: 3.17, y: 0.24, z: 0.051982485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -454,14 +454,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 8}
+    oldSize: {x: 0.5, y: 12.5}
     newSize: {x: 0.32, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 8}
+  m_Size: {x: 0.5, y: 12.5}
   m_EdgeRadius: 0
 --- !u!50 &1234683455
 Rigidbody2D:
@@ -494,8 +494,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1489195196}
   - component: {fileID: 1489195195}
-  - component: {fileID: 1489195198}
   - component: {fileID: 1489195197}
+  - component: {fileID: 1489195198}
   m_Layer: 0
   m_Name: wall_left
   m_TagString: wall
@@ -559,7 +559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489195194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.23, y: -1.99, z: -0.26644138}
+  m_LocalPosition: {x: -3.12, y: 0.22, z: -0.26644138}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -603,12 +603,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 8}
+    oldSize: {x: 0.5, y: 12.5}
     newSize: {x: 0.32, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 8}
+  m_Size: {x: 0.5, y: 12.5}
   m_EdgeRadius: 0
