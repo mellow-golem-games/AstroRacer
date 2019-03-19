@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 6f; // Speed of the ship
+    public int reboundForceAmount = 3;
 
     private Rigidbody2D rb;
     private Vector2 target;
@@ -26,14 +27,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void handleWallCollision() {
-      // check the ship position
-      // if position.x < 0 force to right else force to left
-      // simulates the different sides of the walls.
-
       if (gameObject.transform.position.x < 0) {
-        rb.AddForce(new Vector2(3,0), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(reboundForceAmount,0), ForceMode2D.Impulse);
       } else {
-        rb.AddForce(new Vector2(-3,0), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(reboundForceAmount * -1,0), ForceMode2D.Impulse);
       }
       isRebounding = true;
     }
@@ -41,9 +38,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-      // rb.velocity = Vector2.zero;
-
       if(!isRebounding) {
 
         if (Input.GetMouseButton(0)) {
