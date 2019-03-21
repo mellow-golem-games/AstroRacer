@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-
+      Debug.Log("Collision Entered");
       // E.X on grabbing compoenent attributes here
       // Will need to do this for below steps
       // Sprite sp = GetComponent<SpriteRenderer>().sprite;

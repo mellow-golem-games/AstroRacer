@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 6f; // Speed of the ship
-    public int reboundForceAmount = 3;
+    public int reboundForceAmount = 3; // Amount of force to apply to the ship when it hits the wall
 
     private Rigidbody2D rb;
     private Vector2 target;
@@ -20,9 +20,14 @@ public class PlayerMovement : MonoBehaviour
       rb = GetComponent<Rigidbody2D>();
     }
 
+    // Simple game so we can just use an simple if to differentiate between the 2 collisions
+    // that could happen. If we had more this might not be the best approach.
     void OnCollisionEnter2D(Collision2D col) {
       if (col.gameObject.tag == "wall") {
         handleWallCollision();
+      } else {
+        // Everything else we can collide with is an enemy so handle health here
+        // The actual cleanup of the object is handled there
       }
     }
 
@@ -38,8 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(!isRebounding) {
-
+      if(!isRebounding) { // Can't move while we're rebouding from the wall
         if (Input.GetMouseButton(0)) {
     			target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
           currentPosition = gameObject.transform.position;
@@ -52,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
       } else {
         reboundTimer++;
 
-        if(reboundTimer >= 30) {
+        if(reboundTimer >= 30) { // 30 frame of force then we stop rebounding
           reboundTimer = 0;
           isRebounding = false;
           rb.velocity = Vector2.zero;
