@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public float scrollSpeed = 0.3f;
+    public float scrollSpeed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,5 +30,10 @@ public class Enemy : MonoBehaviour
       // We need to play the death animation
       // play the death sound
       // Destroy the object
+    }
+
+    void OnBecameInvisible() {
+      // all the enemies in this game we can simply destroy when they go off screen
+      Destroy(gameObject);
     }
 }
