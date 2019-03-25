@@ -592,6 +592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404590592}
+  - component: {fileID: 1404590593}
   m_Layer: 0
   m_Name: SpawnerCenter
   m_TagString: Untagged
@@ -613,6 +614,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1404590593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404590591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01bed2c0aee94a19a4d966272716adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CircleEnemy: {fileID: 1930604596045995703, guid: 7fb0409116c3d415f8ca60e08f0a45fd,
+    type: 3}
+  xSpawnDistance: 0
+  ySpawnDistance: 6
 --- !u!1001 &1930604595845789926
 PrefabInstance:
   m_ObjectHideFlags: 0
