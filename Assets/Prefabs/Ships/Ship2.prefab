@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   reboundForceAmount: 3
+  playerHealth: {fileID: 11400000, guid: 9e004d1fdc9134aafa1919f2ac7730a9, type: 2}
 --- !u!95 &2627812033123265980
 Animator:
   serializedVersion: 3

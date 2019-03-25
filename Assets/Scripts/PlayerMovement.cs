@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 6f; // Speed of the ship
     public int reboundForceAmount = 3; // Amount of force to apply to the ship when it hits the wall
+    public PlayerHealth playerHealth;
 
     private Rigidbody2D rb;
     private Vector2 target;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
       if (col.gameObject.tag == "wall") {
         handleWallCollision();
       } else {
+        Debug.Log(playerHealth.health);
         // Everything else we can collide with is an enemy so handle health here
         // The actual cleanup of the object is handled there
       }

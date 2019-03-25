@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   reboundForceAmount: 3
+  playerHealth: {fileID: 11400000, guid: 9e004d1fdc9134aafa1919f2ac7730a9, type: 2}
 --- !u!61 &2907570401677437217
 BoxCollider2D:
   m_ObjectHideFlags: 0
