@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public float scrollSpeed = 0.5f;
+    public float scrollSpeed = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
