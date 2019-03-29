@@ -49,8 +49,10 @@ MonoBehaviour:
     type: 3}
   RockRight: {fileID: 5781430673132629294, guid: e0ff08d2cb00840c8bcd723153de9733,
     type: 3}
+  Ship: {fileID: 6144413521152825581, guid: 16f44b73653c24606930e4146f9991a5, type: 3}
   xSpawnDistance: 0
   ySpawnDistance: 6
   spawnCircle: 0.75
   spawnLeftWall: 0
   spawnRightWall: 0
+  spawnEnemyShip: 0
