@@ -15,6 +15,7 @@ public class SpawnPlayer : MonoBehaviour
       // Spawns the ship
       // TODO we need to create a way to get the ship choice from the home screen - for now just
       // spawn the first one.
-      Instantiate(ship1, new Vector3(0,ySpawnDistance,0), Quaternion.identity);
+      GameObject Player = Instantiate(ship1, new Vector3(0,ySpawnDistance,0), Quaternion.identity);
+      Player.gameObject.tag = "Player"; // We use this for collisions later
     }
 }

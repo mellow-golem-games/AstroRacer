@@ -13,6 +13,17 @@ public class Enemy : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D col) {
+      if(GetComponent<Animator>() && col.tag == "Player") { // For Testing as it prevents non-animated objects from erroring out
+        GetComponent<Animator>().Play("Ship_Explode");
+      }
+    }
+
+    // Used to as callback for animation to destory the objects
+    public void destroyObject() {
+  		Destroy(gameObject);
+  	}
+
     // Update is called once per frame
     protected void Update()
     {
@@ -22,7 +33,7 @@ public class Enemy : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-      Debug.Log("Collision Entered");
+      // Debug.Log("Collision Entered");
       // E.X on grabbing compoenent attributes here
       // Will need to do this for below steps
       // Sprite sp = GetComponent<SpriteRenderer>().sprite;
