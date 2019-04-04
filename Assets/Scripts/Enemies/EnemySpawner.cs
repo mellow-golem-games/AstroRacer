@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Ship;
     public float xSpawnDistance = 0f;
     public float ySpawnDistance = 6f;
+    public int framesToSpawn = 120; // This sets a delay in spawning. Needed or else you end up with waves of enemies which looks weird
 
     // Set the percentrage chances of each enemy spawning. We can update this per spawner to
     // get a different flow for each one and force certain enemies to spawn where we want
@@ -22,18 +23,12 @@ public class EnemySpawner : MonoBehaviour
 
     private int tickCounter;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
       tickCounter++; // probably a better way to do this
 
-      if(tickCounter % 120 == 0) {
+      if(tickCounter % framesToSpawn == 0) {
         float randomNumber = Random.Range(0, 1f);
 
         // We simply cycle through the list of enemies and if the random number is less than the spawn chance
