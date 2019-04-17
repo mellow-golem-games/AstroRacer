@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject CircleEnemy;
     public GameObject RockLeft;
     public GameObject RockRight;
+    public GameObject LargeRockLeft;
+    public GameObject LargeRockRight;
     public GameObject Ship;
     public float xSpawnDistance = 0f;
     public float ySpawnDistance = 6f;
@@ -19,6 +21,8 @@ public class EnemySpawner : MonoBehaviour
     public float spawnLeftWall = 0;
     public float spawnRightWall = 0;
     public float spawnEnemyShip = 0;
+    public float spawnLargeRockLeft = 0;
+    public float spawnLargeRockRight = 0;
 
 
     private int tickCounter;
@@ -42,6 +46,10 @@ public class EnemySpawner : MonoBehaviour
           Instantiate(RockRight, new Vector3(xSpawnDistance,ySpawnDistance,0), Quaternion.identity);
         } else if (randomNumber < spawnEnemyShip) {
           Instantiate(Ship, new Vector3(xSpawnDistance,ySpawnDistance,0), Quaternion.identity);
+        } else if (randomNumber < spawnLargeRockLeft) {
+          Instantiate(LargeRockLeft, new Vector3(xSpawnDistance,ySpawnDistance,0), Quaternion.identity);
+        } else if (randomNumber < spawnLargeRockRight) {
+          Instantiate(LargeRockRight, new Vector3(xSpawnDistance,ySpawnDistance,0), Quaternion.identity);
         }
       }
     }

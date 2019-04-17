@@ -404,7 +404,7 @@ PrefabInstance:
     - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
         type: 3}
       propertyPath: spawnLeftWall
-      value: 0.55
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
         type: 3}
@@ -414,7 +414,7 @@ PrefabInstance:
     - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
         type: 3}
       propertyPath: xSpawnDistance
-      value: 2.75
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
         type: 3}
@@ -425,6 +425,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ySpawnDistance
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
+        type: 3}
+      propertyPath: LargeRockLeft
+      value: 
+      objectReference: {fileID: 5836815770007442032, guid: f2ceeaf794cab4162b815c3d515ebd9c,
+        type: 3}
+    - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
+        type: 3}
+      propertyPath: spawnLargeRockLeft
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ffeb4371eba846d491a0a8e6432d750, type: 3}
@@ -804,7 +815,7 @@ PrefabInstance:
     - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
         type: 3}
       propertyPath: spawnRightWall
-      value: 0.55
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
         type: 3}
@@ -815,6 +826,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ySpawnDistance
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
+        type: 3}
+      propertyPath: LargeRockRight
+      value: 
+      objectReference: {fileID: 3484035623410282079, guid: be9ee1a601cf0487f9de21b68731d7fd,
+        type: 3}
+    - target: {fileID: 6654655571332831740, guid: 4ffeb4371eba846d491a0a8e6432d750,
+        type: 3}
+      propertyPath: spawnLargeRockRight
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ffeb4371eba846d491a0a8e6432d750, type: 3}
