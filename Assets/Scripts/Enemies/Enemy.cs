@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col) {
       if(GetComponent<Animator>() && col.tag == "Player") { // For Testing as it prevents non-animated objects from erroring out
-        Debug.Log("this is a collision");
         GetComponent<Animator>().Play("Ship_Explode");
       }
     }

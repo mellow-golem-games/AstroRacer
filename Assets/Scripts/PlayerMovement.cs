@@ -21,16 +21,14 @@ public class PlayerMovement : MonoBehaviour
       rb = GetComponent<Rigidbody2D>();
     }
 
-    // Simple game so we can just use an simple if to differentiate between the 2 collisions
-    // that could happen. If we had more this might not be the best approach.
     void OnCollisionEnter2D(Collision2D col) {
-      if (col.gameObject.tag == "wall") {
-        handleWallCollision();
-      } else {
-        Debug.Log(playerHealth.health);
-        // Everything else we can collide with is an enemy so handle health here
-        // The actual cleanup of the object is handled there
-      }
+      // The only other rigidBody that will trigger here is the walls
+      // all enemies are triggers so use OnTriggerEnter2D
+      handleWallCollision();
+    }
+
+    void OnTriggerEnter2D(Collider2D col) { // collision to check if running into another entity
+      playerHealth.health--;
     }
 
     private void handleWallCollision() {
