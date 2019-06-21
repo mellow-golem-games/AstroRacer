@@ -8,7 +8,9 @@ public class SpawnPlayer : MonoBehaviour
     public GameObject ship1;
     public GameObject ship2;
     public GameObject ship3;
-    public float ySpawnDistance = -4.5f;
+
+    [SerializeField]
+    private float ySpawnDistance = -4.5f;
 
     void Start()
     {
