@@ -8,9 +8,9 @@ public class handleShipSwitch : MonoBehaviour
 
     public void shipSwitchHandler(int switchedTo) {
         if(shipNumber == switchedTo) {
-          transform.position = new Vector3(0,0,0);
+          transform.localPosition = new Vector3(6,6,0);
         } else {
-          transform.position = new Vector3(20,20,0);
+          transform.localPosition = new Vector3(20,20,0);
         }
     }
 }
