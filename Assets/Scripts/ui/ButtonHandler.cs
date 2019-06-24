@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour {
 	public void startGame() {
+		int currentShip = GameObject.Find("ShipSwitcher").GetComponent<ShipSwitcher>().currentShip;
+		PlayerPrefs.SetInt ("currentShip", currentShip);
 		SceneManager.LoadScene("Game");
 	}
 

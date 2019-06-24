@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipSwitcher : MonoBehaviour
 {
-    private int currentShip = 1;
+    public int currentShip = 1;
 
     // updates which ship we are currently on
     // TODO pass it down to children?
