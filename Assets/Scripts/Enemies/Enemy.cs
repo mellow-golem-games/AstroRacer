@@ -45,6 +45,14 @@ public class Enemy : MonoBehaviour
 
     void OnBecameInvisible() {
       // all the enemies in this game we can simply destroy when they go off screen
+      updateScore();
       Destroy(gameObject);
+    }
+
+
+    private void updateScore() {
+      GameObject ScoreText = GameObject.Find("ScoreText");
+      ScoreHandler scoreHandler = (ScoreHandler) ScoreText.GetComponent(typeof(ScoreHandler));
+    	scoreHandler.updateScore(10);
     }
 }
