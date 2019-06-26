@@ -22,10 +22,11 @@ public class ScoreHandler : MonoBehaviour
 
     void OnDestroy() {
       // handles checking and updating score
+      PlayerPrefs.SetInt("currentScore", this.score); // set the current score first
       int currentScore = PlayerPrefs.GetInt("score", 0);
 
       if(score > currentScore) {
-        // save the score
+        PlayerPrefs.SetInt("score", this.score);
       }
     }
 

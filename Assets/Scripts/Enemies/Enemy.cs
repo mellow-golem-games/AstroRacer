@@ -52,7 +52,10 @@ public class Enemy : MonoBehaviour
 
     private void updateScore() {
       GameObject ScoreText = GameObject.Find("ScoreText");
-      ScoreHandler scoreHandler = (ScoreHandler) ScoreText.GetComponent(typeof(ScoreHandler));
-    	scoreHandler.updateScore(10);
+
+      if (ScoreText) {
+        ScoreHandler scoreHandler = (ScoreHandler) ScoreText.GetComponent(typeof(ScoreHandler));
+      	scoreHandler.updateScore(10);
+      }
     }
 }

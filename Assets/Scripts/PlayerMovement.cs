@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f; // Speed of the ship
     public int reboundForceAmount = 3; // Amount of force to apply to the ship when it hits the wall
     public PlayerHealth playerHealth;
+    public int playerHealthInitialCount = 4;
 
     private Rigidbody2D rb;
     private Vector2 target;
@@ -19,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
       rb = GetComponent<Rigidbody2D>();
+      playerHealth.health = playerHealthInitialCount; // set the health to our starting value
     }
 
     void OnCollisionEnter2D(Collision2D col) {
@@ -40,9 +43,18 @@ public class PlayerMovement : MonoBehaviour
       isRebounding = true;
     }
 
+    private void killPlayer() {
+      // handle destruction of the player here
+      // we can play an animation with a callback to trigger this
+      SceneManager.LoadScene("Over");
+    }
+
     // Update is called once per frame
     void Update()
     {
+      if(playerHealth.health == 0) {
+        killPlayer();
+      }
       if(!isRebounding) { // Can't move while we're rebouding from the wall
         if (Input.GetMouseButton(0)) {
     			target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
