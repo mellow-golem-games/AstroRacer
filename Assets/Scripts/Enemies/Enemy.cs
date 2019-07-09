@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
 
     public float scrollSpeed = 1f;
+    public AudioClip explode;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     // Used to as callback for animation to destory the objects
     public void destroyObject() {
+      AudioSource.PlayClipAtPoint(explode, transform.position);
   		Destroy(gameObject);
   	}
 

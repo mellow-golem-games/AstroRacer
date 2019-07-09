@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
+  explode: {fileID: 8300000, guid: 9b1a1aca0680f4849a42d716f3589f75, type: 3}
 --- !u!61 &5836815770007442033
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -40,3 +40,4 @@ sysinfo.txt
 .DS_Store
 .AppleDouble
 .LSOverride
+build/

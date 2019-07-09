@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 1.75
+  explode: {fileID: 8300000, guid: 9b1a1aca0680f4849a42d716f3589f75, type: 3}
 --- !u!95 &5140268200050697941
 Animator:
   serializedVersion: 3

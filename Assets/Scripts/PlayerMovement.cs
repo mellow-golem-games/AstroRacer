@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public int reboundForceAmount = 3; // Amount of force to apply to the ship when it hits the wall
     public PlayerHealth playerHealth;
     public int playerHealthInitialCount = 4;
+    public AudioClip explode;
 
     private Rigidbody2D rb;
     private Vector2 target;
@@ -46,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
     private void killPlayer() {
       // handle destruction of the player here
       // we can play an animation with a callback to trigger this
+      AudioSource.PlayClipAtPoint(explode, transform.position);
+      GetComponent<Animator>().Play("Ship_Explode");
+    }
+
+    public void destroyObject() { //handler for ship_explode anim
       SceneManager.LoadScene("Over");
     }
 
