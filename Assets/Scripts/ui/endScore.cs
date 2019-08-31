@@ -14,7 +14,7 @@ public class endScore : MonoBehaviour
 
 
   		if(currentHighscore == currentScore) {
-  			Score.text += "New High Score!: " + currentHighscore;
+  			Score.text += "\n New High Score!: " + currentHighscore;
   		} else {
   			Score.text += "\n High Score: " + currentHighscore;
   		}

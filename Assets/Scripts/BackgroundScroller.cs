@@ -7,7 +7,7 @@ public class BackgroundScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Screen.width == 1125) { // Iphone x widtth
+        if(Screen.width == 1125 || Screen.width == 828) { // Iphone x widtth & Xs width
           Camera camera = this.GetComponent<Camera>();
           camera.orthographicSize = 7.013923F;
         }
