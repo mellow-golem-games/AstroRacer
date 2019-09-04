@@ -11,8 +11,8 @@ public class Ship : Enemy
     }
 
     // Update is called once per frame
-    new void Update()
+    new void FixedUpdate()
     {
-        base.Update(); // call the parent update method for movement
+        base.FixedUpdate(); // call the parent update method for movement
     }
 }

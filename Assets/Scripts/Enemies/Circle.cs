@@ -11,9 +11,9 @@ public class Circle : Enemy
     }
 
     // Update is called once per frame
-    new void Update()
+    new void FixedUpdate()
     {
-      base.Update(); // call the parent update method for movement
+      base.FixedUpdate(); // call the parent update method for movement
 
       // anything specific to this enemy during update can go here.
     }

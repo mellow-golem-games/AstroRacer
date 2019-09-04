@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
   	}
 
     // Update is called once per frame
-    protected void Update()
+    protected void FixedUpdate()
     {
       Vector3 currentPosition = transform.position;
       currentPosition.y = currentPosition.y - scrollSpeed / 32;

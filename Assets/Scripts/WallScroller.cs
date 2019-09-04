@@ -13,7 +13,7 @@ public class WallScroller : MonoBehaviour
       startPosition = transform.position;
     }
 
-    void Update() // Every frame move the wall down a bit
+    void FixedUpdate() // Every frame move the wall down a bit
     {
       Vector3 currentPosition = transform.position;
       currentPosition.y = currentPosition.y - scrollSpeed / 32;

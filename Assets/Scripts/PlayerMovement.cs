@@ -55,8 +55,7 @@ public class PlayerMovement : MonoBehaviour
       SceneManager.LoadScene("Over");
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
       if(playerHealth.health == 0) {
         killPlayer();
