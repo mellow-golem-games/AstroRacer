@@ -23,8 +23,9 @@ public class WallScroller : MonoBehaviour
     // Moves the wall to the top of the screen to repeat
     void OnBecameInvisible() {
       if (transform != null && Camera.main != null) { // check here or it will error out on scene switch
-        float newYVal = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)).y * 2;
+        float newYVal = Camera.main.orthographicSize * 2f;
         transform.position = new Vector3(transform.position.x, newYVal, transform.position.z);
+        Debug.Log(newYVal);
       }
     }
 }
